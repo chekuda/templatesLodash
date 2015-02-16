@@ -42,7 +42,7 @@ document.onclick = function() {
 		var merchantName = document.getElementById('Merchant').value;
 		var links = document.getElementById('links').value;
 		var imagesGen = document.getElementById('pahtGen').value;
-		var imagesPF = document.getElementById('pahtPF').value;
+		var imagesPF = document.getElementById('pathPF').value;
 		//var colorBg =  document.getElementById('background').value;
 		var textGen = document.getElementById('genTex').value;
 		//var textPF = document.getElementById('genTex').value;
@@ -59,10 +59,10 @@ document.onclick = function() {
                     '4': 'dach.html'};
 		
 				var selectionKeyPF = {
-                    '1': 'standard1Gen.html',
-                    '2': 'standard2Gen.html',
-                    '3': 'standard3Gen.html',
-                    '4': 'dach.html'};
+                    '1': 'standard1pf.html',
+                    '2': 'standard2pf.html',
+                    '3': 'standard3pf.html',
+                    '4': 'dachpf.html'};
                     
 		//llamo al servidor donde tengo el archivo Gen
 		$.ajax({
@@ -85,7 +85,7 @@ document.onclick = function() {
 		//llamo al servidor donde tengo el archivo PF
 		$.ajax({
                     //esta URL me cojera la url donde tengo el archivo ./standard.html
-                    url: selectionKeyPF[selection],
+                    url: './PF/'+ selectionKeyPF[selection],
                     //si la conexion esta bien hecha entro en success
                     success: function(data)
                     {
@@ -96,7 +96,7 @@ document.onclick = function() {
                     }, 
                     error: function() {
 			console.log(arguments);
-			document.getElementById('GenText').innerHTML = 'IDIOTA!'
+			document.getElementById('PFText').innerHTML = 'IDIOTA!'
                     }
                 });
                 
