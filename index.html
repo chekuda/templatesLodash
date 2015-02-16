@@ -1,0 +1,80 @@
+
+<html>
+<head>
+    <title>FirsJS</title>
+    <style type="text/css">
+            @media only screen and (max-width: 480px) {
+            body   {  -webkit-text-size-adjust: none; }
+            }
+            @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+            body   {  -webkit-text-size-adjust: none; }
+            }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <script type="text/javascript" src="js.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+    <div id="content">
+        <div class="box">
+            <h2 class="title">veContact</h2>
+            <div class="standardSelection">
+                <input type="radio" name="standard" value="1" checked>Std1
+                <input type="radio" name="standard" value="2">Std2
+                <input type="radio" name="standard" value="3">Std3
+                <input type="radio" name="standard" value="4">Dach
+            </div>
+            <form type="text" name="veContactForm">
+                <div class="divForm">
+                    <textarea name="Merchant" id="Merchant" placeholder="Add merchat name"></textarea>
+                </div>
+                <div class="divForm" >
+                    <textarea name="Links" id="links" placeholder="Add links"></textarea>
+                </div>
+                <div class="divForm" >
+                    <textarea style="width: 145px !important;" name="imagesGen" id="pahtGen" placeholder="Path of Gen images"></textarea>
+                    <textarea style="width: 145px !important;margin-left: 10px !important" id="pathPF" name="imagesPF" placeholder="Path of PF images"></textarea>
+                </div>
+                <div class="divForm" >
+                    <textarea name="background" id="background" placeholder="Add color of background"></textarea>
+                </div>
+                <div class="divForm" >
+                     <textarea style="width: 145px !important;" name="textGen" id="genTex" placeholder="Add text Gen"></textarea>
+                    <textarea style="width: 145px !important;margin-left: 10px !important" name="textPF" placeholder="Add text PF"></textarea>
+                </div>
+                <div class="divForm" >
+                    <textarea name="disclaimer" id="disclaimer" placeholder="Add disclaimer"></textarea>
+                </div>
+                 <div class="divForm" >
+                
+                    <textarea style="width: 90px !important;" name="social1" id="social1" placeholder="Social Link 1"></textarea>
+                    <textarea style="width: 91px !important;margin-left: 10px !important" id="social2" name="socia2" placeholder="Social Link 2"></textarea>
+                    <textarea style="width: 100px !important;margin-left: 10px !important" id="social3" name="social3" placeholder="Social Link 3"></textarea>
+                </div>
+            </form>
+            <div class="myButton" onclick="standardResponsive1();">
+                Generate HTML
+            </div>
+        </div>
+         <div class="box">
+            <h2 class="title">Generic</h2>
+            <div class="boxContent">
+                <textarea id="GenText" name="GenText"></textarea>
+            </div>
+         </div>
+         <div class="box">
+            <h2 class="title">Product F</h2>
+            <div class="boxContent">
+                <textarea id="PFText" name="PFText" ></textarea>
+            </div>
+         </div>
+    </div>
+     <div id="footer">
+        
+     </div>
+    
+</body>
+</html>
