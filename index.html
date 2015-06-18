@@ -12,8 +12,9 @@
     </style>
     <link rel="stylesheet" type="text/css" href="css.css" />
     <script type="text/javascript" src="js.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+    <!--adding CDN jquery-->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 
@@ -21,6 +22,12 @@
     <div id="content">
         <div class="box">
             <h2 class="title">veContact</h2>
+            <div class="radiotype">
+                <input id="checkGen" type="checkbox" name="type" value="1" checked >Gen
+                <input id="checkPF" type="checkbox" name="type" value="2" >PF
+               
+            </div>
+            
             <div class="standardSelection">
                 <input type="radio" name="standard" value="1" checked>Std1
                 <input type="radio" name="standard" value="2">Std2
@@ -31,19 +38,31 @@
                 <div class="divForm">
                     <textarea name="Merchant" id="Merchant" placeholder="Add merchat name"></textarea>
                 </div>
+                <div class="divForm">
+                    <textarea name="preview" id="preview" placeholder="Add preview"></textarea>
+                </div>
                 <div class="divForm" >
                     <textarea name="Links" id="links" placeholder="Add links"></textarea>
                 </div>
                 <div class="divForm" >
-                    <textarea style="width: 145px !important;" name="imagesGen" id="pahtGen" placeholder="Path of Gen images"></textarea>
+                    <textarea name="imagesGen" id="pahtGen" placeholder="Path of Gen images"></textarea>
                     <textarea style="width: 145px !important;margin-left: 10px !important" id="pathPF" name="imagesPF" placeholder="Path of PF images"></textarea>
-                </div>
+                </div> 
                 <div class="divForm" >
                     <textarea name="background" id="background" placeholder="Add color of background"></textarea>
                 </div>
-                <div class="divForm" >
-                     <textarea style="width: 145px !important;" name="textGen" id="genTex" placeholder="Add text Gen"></textarea>
-                    <textarea style="width: 145px !important;margin-left: 10px !important" name="textPF" placeholder="Add text PF"></textarea>
+                <div class="divForm" id="divFormHeaderText">
+                    <textarea name="headerText" id="headerText" placeholder="Add Header text"></textarea>
+                </div>
+                <div class="divForm" id="divFormSubHeaderText">
+                    <textarea name="SubHeaderText" id="SubHeaderText" placeholder="Add Sub Header text"></textarea>
+                </div>
+                <div class="divForm">
+                     <textarea name="textGen" id="genTex" placeholder="Add text Gen"></textarea>
+                    <textarea style="width: 145px !important;margin-left: 10px !important" name="textPF" id="Textpf" placeholder="Add text PF"></textarea>
+                </div>
+                <div class="divForm" id="divFormPf2" style="display:none; visibility: visible;">
+                    <textarea style="width: 145px !important; margin-left: 205px !important;" name="textPF2" id="Textpf2" placeholder="Add second text PF"></textarea>
                 </div>
                 <div class="divForm" >
                     <textarea name="disclaimer" id="disclaimer" placeholder="Add disclaimer"></textarea>
@@ -55,8 +74,11 @@
                     <textarea style="width: 100px !important;margin-left: 10px !important" id="social3" name="social3" placeholder="Social Link 3"></textarea>
                 </div>
             </form>
-            <div class="myButton" onclick="standardResponsive1();">
-                Generate HTML
+            <div class="myButton preview">
+                Preview
+            </div>
+			<div class="myButton download">
+                Download
             </div>
         </div>
          <div class="box">
