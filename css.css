@@ -19,7 +19,7 @@ body
 
 .box{
     width: 400px;
-    height: 500px;
+    height: 650px;
     float: left;
     margin-left: 40px;
     margin-top: 40px;
@@ -50,12 +50,38 @@ h2{
    margin-left: 36%;
    color: #08BBFC;
 }
+
+
+#genTex{
+	width:310px;
+}
 .divForm{
     
     margin-bottom: 10px;
     float: left;
     display: block;
     width: 90%;
+}
+//Template 2 start
+#divFormHeaderText{
+	
+	visibility: hidden;
+	display: none;
+	
+}
+#divFormSubHeaderText{
+	
+	visibility: hidden;
+	display: none;
+	
+}
+//Template 2 End
+
+
+#divFormPf2{
+	
+	visibility: hidden !important;
+	display: none !important;
 }
 .standardSelection{
     width: 234px;
@@ -64,10 +90,10 @@ h2{
 }
 
 #GenText{
-    height: 391px;
+    height: 520px;
 }
 #PFText{
-    height: 391px;
+    height: 520px;
 }
 textarea{
     width: 310px;
@@ -100,8 +126,8 @@ textarea{
 	text-decoration:none;
 	text-shadow:0px 1px 0px #1570cd;
         height: 20px;
-        width: 115px;
-        margin-left: 29%;
+        width: 75px;
+        margin-left: 12%;
         margin-top: 20px;
 }
 .myButton:hover {
@@ -117,4 +143,22 @@ textarea{
 .myButton:active {
 	position:relative;
 	top:1px;
+}
+#pahtGen{
+	width:310px;
+}
+#pathPF{
+	visibility: hidden;
+	display: none;
+}
+#Textpf{
+	visibility:hidden;
+	display:none;
+	
+}
+
+.radiotype{
+	padding-left: 34%;
+	padding-bottom: 10px;	
+	
 }
