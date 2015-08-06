@@ -5,6 +5,28 @@ document.onclick = function() {
     
     window.onload= function ()
     {
+		
+		//*************************Text Editor************************
+		//tinymce.init({selector:'#GenText'});
+		$("#genTex").on('click',openEditor);
+		
+		function openEditor()
+		{
+			var tEditor = $("#footer");
+			if(!$("#footer #textEditorPlace").length)
+			{
+			$("#footer").append("<textarea id='textEditorPlace'></textarea>");
+			$("#footer").css({"height":"211px","index-z":"1"});
+			tinymce.init({selector:"#textEditorPlace"});
+			}
+			else
+			{
+				//show and hide the footer when the textEditor is created
+				tEditor.toggle();
+				
+			}
+		}
+		
         //*****************************  select the PF or Gen required   **************************** 
                 
 		$("[name='standard']").on('click',clickedPF);
