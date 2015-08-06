@@ -44,8 +44,10 @@ body
     display: block;
     width: 100%;
     background-color: #ffffff;
-    margin-bottom: 0px;
+    bottom: 0px;
     height: 40px;
+    position: fixed;
+	border-top: solid 1px #cccccc;
     
 }
 h2{
